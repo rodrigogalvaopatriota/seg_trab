@@ -164,11 +164,11 @@ class Dashboard:
          #dia da semana
         #regiao
         st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e Região</p>', unsafe_allow_html=True)
-        chart_regiao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='first_name_telegram')
+        chart_regiao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='first_name_telegram',nome_y='dia')
         st.altair_chart(chart_regiao, use_container_width=True)
         #uf
         st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e UF</p>', unsafe_allow_html=True)
-        chart_uf = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='uf')
+        chart_uf = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='mes')
         st.altair_chart(chart_uf, use_container_width=True)
         
         #Est.
