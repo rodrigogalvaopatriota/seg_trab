@@ -10,7 +10,7 @@ class Dashboard:
     def __init__(self):
         
         #self.df = TreatDataFrame()
-        self.df = pd.read_excel(f'result_geral.xlsx')
+        self.df = pd.read_excel('result_geral.xlsx')
         self.df['den'] = 1
     
     
