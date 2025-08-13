@@ -114,7 +114,7 @@ class Dashboard:
               
         st.set_page_config(
             page_title="Contagem postagem telegram",
-            page_icon="📊",
+            #page_icon="📊",
             layout="wide",  # Alternativas: 'centered' ou 'wide'
         )
 
