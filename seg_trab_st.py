@@ -164,24 +164,13 @@ class Dashboard:
          #dia da semana
         #regiao
         st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e Região</p>', unsafe_allow_html=True)
-        chart_regiao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='regiao')
+        chart_regiao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='first_name_telegram')
         st.altair_chart(chart_regiao, use_container_width=True)
         #uf
         st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e UF</p>', unsafe_allow_html=True)
-        chart_uf = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='uf')
+        chart_uf = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='uf')
         st.altair_chart(chart_uf, use_container_width=True)
-        #dia da semana
-        st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e dia da semana</p>', unsafe_allow_html=True)
-        chart_diaSemana = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='nome_dia_abertura')
-        st.altair_chart(chart_diaSemana, use_container_width=True)
-        #descriçaõ
-        st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e descricao</p>', unsafe_allow_html=True)
-        chart_descricao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='breve_descr_problema')
-        st.altair_chart(chart_descricao, use_container_width=True)
-        #Cos
-        st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e cos</p>', unsafe_allow_html=True)
-        chart_cos = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='Cos')
-        st.altair_chart(chart_cos, use_container_width=True)
+        
         #Est.
         #st.markdown('<p style="font-size:30px; font-weight:bold;">Prioridade e estação</p>', unsafe_allow_html=True)
         #chart_estacao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='prioridade_ba',nome_y='Est.')
