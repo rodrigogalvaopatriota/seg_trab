@@ -12,7 +12,8 @@ class Dashboard:
         #self.df = TreatDataFrame()
         self.df = pd.read_excel('result_geral.xlsx')
         self.df['den'] = 1
-        self.df['first_name_telegram'] = self.df['first_name_telegram'].str.split(' ')[0]
+        self.df['first_name_telegram'] = self.df['first_name_telegram'].str.strip()
+        self.df['first_name_telegram'] = self.df['first_name_telegram'].str.split(' ').str[0]
     
     
     
