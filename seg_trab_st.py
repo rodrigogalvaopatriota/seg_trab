@@ -12,6 +12,7 @@ class Dashboard:
         #self.df = TreatDataFrame()
         self.df = pd.read_excel('result_geral.xlsx')
         self.df['den'] = 1
+        self.df['first_name_telegram'] = self.df['first_name_telegram'].str.split(' ')[0]
     
     
     
@@ -163,7 +164,7 @@ class Dashboard:
                 ]
          #dia da semana
         #regiao
-        st.markdown('<p style="font-size:30px; font-weight:bold;">Coordenador por mes</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size:30px; font-weight:bold;">Coordenador por dia</p>', unsafe_allow_html=True)
         chart_regiao = self.grafico_barras_prioridade_diaDaSemanaAbertura(data_chart=df_filter_prioridade,nome_x='dia',nome_y='first_name_telegram')
         st.altair_chart(chart_regiao, use_container_width=True)
         #uf
@@ -178,7 +179,7 @@ class Dashboard:
         
         
        
-        st.dataframe(df_filter_prioridade, width=4000) 
+        #st.dataframe(df_filter_prioridade, width=4000) 
 
        
 
