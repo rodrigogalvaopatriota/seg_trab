@@ -10,7 +10,7 @@ class Dashboard:
     def __init__(self):
         
         #self.df = TreatDataFrame()
-        self.df = df = pd.read_excel(f'result_geral.xlsx')
+        self.df = pd.read_excel(f'result_geral.xlsx')
         self.df['den'] = 1
     
     
@@ -56,7 +56,7 @@ class Dashboard:
             alt.Chart(data_chart)
             .mark_text(dy=-10, size=10, color="black")  # Ajusta a posição e aparência do texto
             .encode(
-                x=alt.X("prioridade_ba:N"),
+                x=alt.X("dia:N"),
                 #y=alt.Y("den:Q"),
                
 
@@ -72,6 +72,7 @@ class Dashboard:
         #chart = bars
         return chart
 
+    
     def grafico_barras(self,data_chart):
 
          # Criar o gráfico de barras
